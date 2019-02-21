@@ -12,7 +12,7 @@
     #liste {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 70px solid #293b29;
+        border: 90px solid #293b29;
         margin: auto;
     }
 
@@ -23,9 +23,10 @@
 
     .kategorier {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 3px solid #2e8431;
-        margin: 6px;
-        padding: 5px;
+        border: 30px solid #fff;
+        height: 350px;
+        background-color: #B2C4B4;
+
     }
 
     h2 {
@@ -60,15 +61,19 @@
     }
 
     .filter {
-        font-size: 23px;
+        font-size: 24px;
         border-radius: 4px;
-        font-family: "HelveticaNeue-Light";
+        font-family: "Helvetica-Light";
         margin: 10px;
         background-color: white;
+
     }
 
     button {
         border: none;
+        padding-left: 70px;
+        padding-right: 70px;
+        align-self: center;
     }
 
     /*
@@ -91,7 +96,7 @@ popup styling
         background-color: rgba(0, 0, 0, 0.54);
         display: none;
         margin-left: 280px;
-        text-align: center;
+
     }
 
     #popup img {
@@ -173,7 +178,6 @@ knap til popup
                                     <img src="billeder/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                     <p>Kategori: ${kategorier.kategori}</p>
                                     <p>Pris: ${kategorier.pris} kr.</p>
-                                    <p>${kategorier.kort}</p>
                                 </div>
                             `;
                         dest.insertAdjacentHTML("beforeend", template);
