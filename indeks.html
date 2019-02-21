@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bistro Babushka</title>
+    <title>Rise and Curry</title>
 </head>
 
 <style>
@@ -12,7 +12,7 @@
     #liste {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 80px solid #293b29;
+        border: 70px solid #293b29;
         margin: auto;
     }
 
@@ -111,7 +111,6 @@ knap til popup
         font-size: 1.5em;
         border-radius: 4px;
     }
-
 </style>
 
 <body>
@@ -166,7 +165,7 @@ knap til popup
                         let template = `
                                 <div class="kategorier">
                                     <h2>${kategorier.navn}</h2>
-                                    <img src="billeder/${kategorier.billede}-sm.jpg" alt="${kategorier.navn}">
+                                    <img src="billeder/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                     <p>Kategori: ${kategorier.kategori}</p>
                                     <p>Pris: ${kategorier.pris} kr.</p>
                                     <p>${kategorier.kort}</p>
@@ -179,7 +178,7 @@ knap til popup
                             document.querySelector("#indhold").innerHTML = `
                                 <div class="popup">
                                     <h2>${kategorier.navn}</h2>
-                                        <img src="billeder/${kategorier.billede}-sm.jpg" alt="${kategorier.navn}">
+                                        <img src="billeder/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                         <p>Kategori: ${kategorier.kategori}</p>
                                         <p>Pris: ${kategorier.pris} kr.</p>
                                         <p>Kort: ${kategorier.kort}</p>
@@ -196,26 +195,27 @@ knap til popup
             document.querySelector("#luk button").addEventListener("click", () => {
                 document.querySelector("#popup").style.display = "none";
             })
-        })
 
-        document.querySelectorAll(".filter").forEach(elm => {
-            elm.addEventListener("click", filtrering);
-
-        })
-
-        function filtrering() {
-            filter = this.getAttribute("data-hold");
-            filter = this.getAttribute("data-hold");
-            document.querySelector("h1").textContent = this.textContent;
             document.querySelectorAll(".filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            })
-            this.classList.add("valgt");
-            console.log("Viser", filter)
-            visKategori();
-        }
-        getJson();
-        }
+                elm.addEventListener("click", filtrering);
 
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                console.log("Viser", filter)
+                visKategori();
+            }
+            getJson();
+        }
     </script>
+
 </body>
+
+
+</html>
