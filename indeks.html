@@ -54,16 +54,21 @@
 */
     .menu {
         text-align: center;
-        background-color: rgb(219, 172, 13);
+        background-color: #fff;
         font-size: 15px;
+        margin: 60px;
     }
 
     .filter {
-        font-size: 15px;
+        font-size: 23px;
         border-radius: 4px;
-        font-family: helvetica;
+        font-family: "HelveticaNeue-Light";
         margin: 10px;
         background-color: white;
+    }
+
+    button {
+        border: none;
     }
 
     /*
@@ -115,14 +120,14 @@ knap til popup
 
 <body>
     <header>
-        <h1>Rise Curry</h1>
+        <!--<h1>Rise Curry</h1>-->
         <nav>
             <div class="menu">
-                <button class="filter" data-hold="alle">Alle kategorier</button>
-                <button class="filter" data-hold="forretter">Forret</button>
-                <button class="filter" data-hold="hovedretter">Hovedret</button>
+                <button class="filter" data-hold="forretter">Appetizer</button>
+                <button class="filter" data-hold="hovedretter">Main dish</button>
                 <button class="filter" data-hold="desserter">Dessert</button>
-                <button class="filter" data-hold="drikkevarer">Drikkevarer</button>
+                <button class="filter" data-hold="drikkevarer">Drinks</button>
+                <button class="filter" data-hold="alle">Menu</button>
             </div>
         </nav>
     </header>
@@ -203,7 +208,7 @@ knap til popup
 
             function filtrering() {
                 filter = this.getAttribute("data-hold");
-                document.querySelector("h1").textContent = this.textContent;
+                //                document.querySelector("h1").textContent = this.textContent;
                 document.querySelectorAll(".filter").forEach(elm => {
                     elm.classList.remove("valgt");
                 })
