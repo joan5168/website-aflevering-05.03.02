@@ -4,124 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Rise and Curry</title>
 </head>
-
-<style>
-    /*    styling for hele sitet */
-    #liste {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 90px solid #293b29;
-        margin: auto;
-    }
-
-    .kategorier img {
-        max-width: 150px;
-        margin-left: 50px;
-    }
-
-    .kategorier {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        border: 30px solid #fff;
-        height: 350px;
-        background-color: #B2C4B4;
-
-    }
-
-    h2 {
-        text-align: center;
-        color: #2d552d;
-    }
-
-    p {
-        margin-left: 50px;
-        color: rgb(142, 116, 27);
-    }
-
-    .valgt {
-        border-radius: 4px;
-        background-color: rgba(175, 159, 105, 0.92);
-    }
-
-    h1 {
-        text-align: center;
-        font-family: cursive;
-        font-size: 50px;
-    }
-
-    /*
-    menu linje/bar
-*/
-    .menu {
-        text-align: center;
-        background-color: #fff;
-        font-size: 15px;
-        margin: 60px;
-    }
-
-    .filter {
-        font-size: 24px;
-        border-radius: 4px;
-        font-family: "Helvetica-Light";
-        margin: 10px;
-        background-color: white;
-
-    }
-
-    button {
-        border: none;
-        padding-left: 70px;
-        padding-right: 70px;
-        align-self: center;
-    }
-
-    /*
-popup styling
-*/
-    #indhold {
-        box-sizing: border-box;
-        background-color: rgb(240, 229, 190);
-        width: 59vw;
-        height: 62vh;
-        margin: auto;
-        margin-top: 0px;
-        align-content: center;
-    }
-
-    #popup {
-        width: 60vw;
-        height: 72vh;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.54);
-        display: none;
-        margin-left: 280px;
-
-    }
-
-    #popup img {
-        max-width: 300px;
-    }
-
-    #popup p {
-        font-size: 15px;
-    }
-
-    /*
-knap til popup
-*/
-    #luk {
-        box-sizing: border-box;
-        text-align: right;
-        padding-right: 1em;
-    }
-
-    #luk button {
-        margin-top: 10px;
-        font-size: 1.5em;
-        border-radius: 4px;
-    }
-</style>
 
 <body>
     <header>
@@ -149,6 +35,7 @@ knap til popup
     </section>
     <script>
         let kategoriListe = [];
+        let bgFarver = ["#B2C4B4", "#77967A", "#F4E1B0", "#EAC25C", "#CCD7DB", "#B3C2CC"];
         let filter = "alle";
 
         document.addEventListener("DOMContentLoaded", start);
@@ -180,7 +67,10 @@ knap til popup
                                     <p>Pris: ${kategorier.pris} kr.</p>
                                 </div>
                             `;
+
                         dest.insertAdjacentHTML("beforeend", template);
+
+                        dest.lastElementChild.style.backgroundColor = bgFarver[Math.floor(Math.random() * bgFarver.length)];
                         dest.lastElementChild.addEventListener("click", åben);
 
                         function åben() {
@@ -189,10 +79,9 @@ knap til popup
                                     <h2>${kategorier.navn}</h2>
                                         <img src="billeder/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                         <p>Kategori: ${kategorier.kategori}</p>
+                                        <p>${kategorier.lang}</p>
                                         <p>Pris: ${kategorier.pris} kr.</p>
-                                        <p>Kort: ${kategorier.kort}</p>
-                                        <p>Lang: ${kategorier.lang}</p>
-                                        <p>Oprindelse: ${kategorier.oprindelse}</p>
+
                                  </div>
                                         `;
                             document.querySelector("#popup").style.display = "block";
@@ -222,6 +111,7 @@ knap til popup
             }
             getJson();
         }
+
     </script>
 
 </body>
