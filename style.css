@@ -1,173 +1,252 @@
-  /*    styling for grid - alle kategorier */
-  #liste {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      border-top: 30px;
-      margin: auto;
-  }
+* {
+    margin: 0;
+}
 
-  .kategorier img {
-      max-width: 160px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto
-  }
+/*    styling for grid - alle kategorier */
+#liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-top: 30px;
+    margin: auto;
+}
 
-  .kategorier {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      border: 30px solid #fff;
-      height: 400px;
-      background-color: #B2C4B4;
-  }
+.kategorier img {
+    max-width: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
-  .kategorier h2 {
-      font-size: 15px;
-      text-align: center;
-      font-family: "Helvetica-Light";
-      font-weight: lighter;
-      color: #4a3320;
-      margin: 15px;
-      background-color: rgba(255, 255, 255, 0.44);
-      padding: 10px;
-  }
+.kategorier {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 30px solid #fff;
+    height: 400px;
+    background-color: #B2C4B4;
+}
 
-  p {
-      font-family: "Helvetica-Light";
-      margin-top: 20px;
-      color: #4d4242;
-      text-align: center;
-  }
+.kategorier h2 {
+    font-size: 15px;
+    text-align: center;
+    font-family: "Helvetica-Light";
+    font-weight: lighter;
+    color: #4a3320;
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.44);
+    padding: 10px;
+}
 
-  /* menu linje/bar */
+p {
+    font-family: "Helvetica-Light";
+    margin-top: 20px;
+    color: #4d4242;
+    text-align: center;
+}
 
-  .menu {
-      text-align: center;
-      background-color: #fff;
-      font-size: 15px;
-      margin: 60px;
-  }
+/* menu linje/bar */
 
-  .filter {
-      font-size: 24px;
-      border-radius: 4px;
-      font-family: "Helvetica-Light";
-      margin: 10px;
-      background-color: white;
-      color: #837063;
-  }
+.menu {
+    text-align: center;
+    background-color: #fff;
+    font-size: 15px;
+    margin: 60px;
+}
 
-  button {
-      border: none;
-      padding-left: 70px;
-      padding-right: 70px;
-      align-self: center;
-  }
+.filter {
+    font-size: 24px;
+    border-radius: 4px;
+    font-family: "Helvetica-Light";
+    margin: 10px;
+    background-color: white;
+    color: #837063;
 
-  /* PopUp styling */
+}
 
-  #indhold {
-      box-sizing: border-box;
-      background-color: rgb(244, 218, 152);
-      width: 40vw;
-      height: 52vh;
-      align-content: center;
-      margin-top: 0px;
-  }
+button {
+    border: none;
+    padding-left: 70px;
+    padding-right: 70px;
+    align-self: center;
+}
 
-  #indhold h2 {
-      font-size: 20px;
-      text-align: center;
-      font-family: "Helvetica-Light";
-      color: #8e7968;
-      background-color: rgba(255, 255, 255, 0.44);
-      padding: 10px;
-      margin-top: 0px;
-  }
+/* PopUp styling */
 
+#indhold {
+    box-sizing: border-box;
+    background-color: rgb(244, 218, 152);
+    width: 40vw;
+    height: 52vh;
+    align-content: center;
+    margin-top: 0px;
+}
 
-  #indhold p {
-      margin-left: 50px;
-      font-family: "Helvetica-Light";
-      color: #637b65;
-  }
-
-  #popup {
-      width: 40vw;
-      height: 2.5vw;
-      position: fixed;
-      background-color: rgba(142, 121, 104, 0.49);
-      display: none;
-      margin-left: 425px;
-  }
-
-  #popup img {
-      max-width: 150px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto
-  }
-
-  #popup p {
-      font-size: 13px;
-      margin: 19px;
-      text-align: center;
-      color: #433333;
-  }
-
-  /* knap til popup */
-  #luk {
-      text-align: right;
-      padding-right: 1em;
-  }
-
-  #luk button {
-      font-size: 1.5em;
-      background-color: rgba(255, 255, 255, 0);
-      margin-right: -70px;
-  }
+#indhold h2 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Helvetica-Light";
+    color: #8e7968;
+    background-color: rgba(255, 255, 255, 0.44);
+    padding: 10px;
+    margin-top: 0px;
+}
 
 
+#indhold p {
+    margin-left: 50px;
+    font-family: "Helvetica-Light";
+    color: #637b65;
+}
 
-  /*responsiv ipad*/
+#popup {
+    width: 40vw;
+    height: 2.5vw;
+    position: fixed;
+    background-color: rgba(142, 121, 104, 0.49);
+    display: none;
+    margin-left: 425px;
+}
 
-  @media only screen and (min-width: 621px) {
-      .menu {
-          text-align: center;
-          background-color: #fff;
-          padding: 95px;
-          margin: 2px;
-      }
+#popup img {
+    max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
-      .filter {
-          font-size: 20px;
-          font-family: "Helvetica-Light";
-          background-color: white;
-          color: #837063;
-      }
-  }
+#popup p {
+    font-size: 13px;
+    margin: 19px;
+    text-align: center;
+    color: #433333;
+}
+
+/* knap til popup */
+#luk {
+    text-align: right;
+    padding-right: 1em;
+}
+
+#luk button {
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: -70px;
+}
+
+/*responsiv mobil*/
+
+@media only screen and (min-width: 320px) {
+    .menu {
+        text-align: center;
+    }
+
+    .filter {
+        font-size: 21px;
+        font-family: "Helvetica-Light";
+        background-color: white;
+        color: #837063;
+    }
+
+}
+
+/*responsiv ipad*/
+
+@media only screen and (min-width: 555px) {
+    .menu {
+        text-align: center;
+        background-color: #fff;
+        padding: 88px;
+    }
+
+    .filter {
+        font-size: 21px;
+        font-family: "Helvetica-Light";
+        background-color: white;
+        color: #837063;
+    }
+
+    @media only screen and (min-width: 731px) {
+        .menu {
+            text-align: center;
+            background-color: #fff;
+            padding: 90px;
+        }
+
+        .filter {
+            font-size: 22px;
+            font-family: "Helvetica-Light";
+            background-color: white;
+            color: #837063;
+        }
+    }
+
+    @media only screen and (min-width: 740px) {
+        .menu {
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .filter {
+            font-size: 22px;
+            font-family: "Helvetica-Light";
+            background-color: white;
+            color: #837063;
+            margin: 17px;
+        }
+    }
 
 
-  @media only screen and (min-width: 587px) {
-      .menu {
-          text-align: center;
-          background-color: #fff;
-          padding: 88px;
-          margin: 0px;
-      }
+    /*responsiv desktop*/
 
-      .filter {
-          font-size: 20px;
-          font-family: "Helvetica-Light";
-          background-color: white;
-          color: #837063;
-      }
-  }
 
-  /*responsiv mobil*/
+    @media only screen and (min-width: 769px) {
+        .menu {
+            text-align: center;
+            background-color: #fff;
+            padding: 0;
+        }
 
-  @media only screen and (max-width: 320px) {
-      .menu {
-          margin: 0px;
-          text-align: center;
-      }
-  }
+        .filter {
+            font-size: 18px;
+            font-family: "Helvetica-Light";
+            background-color: white;
+            color: #837063;
+            margin: 1px;
+        }
+
+        button {
+            border: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            align-self: center;
+        }
+    }
+
+
+    @media only screen and (min-width: 1400px) {
+        .menu {
+            text-align: center;
+            background-color: #fff;
+            font-size: 15px;
+            margin: 4px;
+
+        }
+
+        .filter {
+            font-size: 24px;
+            border-radius: 1px;
+            font-family: "Helvetica-Light";
+            margin: 10px;
+            background-color: white;
+            color: #837063;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        button {
+            border: none;
+            padding-left: 70px;
+            padding-right: 70px;
+            align-self: center;
+        }
+
+    }
