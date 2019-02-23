@@ -131,6 +131,14 @@ button {
     margin-right: -70px;
 }
 
+
+.menu .valgt {
+    background-color: #B2C4B4;
+}
+
+
+
+
 /*responsiv mobil*/
 
 @media only screen and (min-width: 320px) {
@@ -163,90 +171,104 @@ button {
         color: #837063;
     }
 
-    @media only screen and (min-width: 731px) {
-        .menu {
-            text-align: center;
-            background-color: #fff;
-            padding: 90px;
-        }
 
-        .filter {
-            font-size: 22px;
-            font-family: "Helvetica-Light";
-            background-color: white;
-            color: #837063;
-        }
+}
+
+@media only screen and (min-width: 731px) {
+    .menu {
+        text-align: center;
+        background-color: #fff;
+        padding: 90px;
     }
 
-    @media only screen and (min-width: 740px) {
-        .menu {
-            text-align: center;
-            background-color: #fff;
-        }
-
-        .filter {
-            font-size: 22px;
-            font-family: "Helvetica-Light";
-            background-color: white;
-            color: #837063;
-            margin: 17px;
-        }
+    .filter {
+        font-size: 22px;
+        font-family: "Helvetica-Light";
+        background-color: white;
+        color: #837063;
     }
 
 
-    /*responsiv desktop*/
 
+}
 
-    @media only screen and (min-width: 769px) {
-        .menu {
-            text-align: center;
-            background-color: #fff;
-            padding: 0;
-        }
-
-        .filter {
-            font-size: 18px;
-            font-family: "Helvetica-Light";
-            background-color: white;
-            color: #837063;
-            margin: 1px;
-        }
-
-        button {
-            border: none;
-            padding-left: 30px;
-            padding-right: 30px;
-            align-self: center;
-        }
+@media only screen and (min-width: 740px) {
+    .menu {
+        text-align: center;
+        background-color: #fff;
     }
 
+    .filter {
+        font-size: 22px;
+        font-family: "Helvetica-Light";
+        background-color: white;
+        color: #837063;
+        margin: 17px;
+    }
 
-    @media only screen and (min-width: 1400px) {
-        .menu {
-            text-align: center;
-            background-color: #fff;
-            font-size: 15px;
-            margin: 4px;
+}
 
-        }
 
-        .filter {
-            font-size: 24px;
-            border-radius: 1px;
-            font-family: "Helvetica-Light";
-            margin: 10px;
-            background-color: white;
-            color: #837063;
-            margin-top: 50px;
-            margin-bottom: 50px;
+/*responsiv desktop*/
 
-        }
 
-        button {
-            border: none;
-            padding-left: 70px;
-            padding-right: 70px;
-            align-self: center;
-        }
+@media only screen and (min-width: 769px) {
+    .menu {
+        text-align: center;
+        background-color: #fff;
+        padding: 0;
+    }
+
+    .filter {
+        font-size: 18px;
+        font-family: "Helvetica-Light";
+        background-color: white;
+        color: #837063;
+        margin: 1px;
+    }
+
+    button {
+        border: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        align-self: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .menu {
+        text-align: center;
+        background-color: #fff;
+        font-size: 15px;
+        margin: 4px;
 
     }
+
+    .filter {
+        font-size: 24px;
+        border-radius: 1px;
+        font-family: "Helvetica-Light";
+        margin: 10px;
+        background-color: white;
+        color: #837063;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+    }
+
+    button {
+        border: none;
+        padding-left: 70px;
+        padding-right: 70px;
+        align-self: center;
+    }
+}
+
+@media only screen and(max-width: 1400px) {
+    .valgt {
+        background-color: #B2C4B4;
+    }
+
+}
