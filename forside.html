@@ -49,10 +49,6 @@
 
     /*øverster del LOGO og frontbillede*/
 
-    .logo {
-        position: relative;
-
-    }
 
     .logo img {
         display: block;
@@ -66,10 +62,11 @@
         width: 25%;
     }
 
+
     .frontBillede h3 {
         position: absolute;
-        top: 380vw;
-        left: 380vw;
+        top: 435px;
+        left: 446px;
         font-size: 4vw;
         font-family: "Helvetica-Light";
         letter-spacing: 1.3px;
@@ -77,17 +74,16 @@
     }
 
     .frontBillede img {
+        position: relative;
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 45%;
     }
 
-
     /*    BOOK styling*/
 
     .bookBoks {
-
         width: 200px;
         background-color: white;
         align-content: center;
@@ -147,6 +143,142 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+
+    @media only screen and (max-width: 768px) {
+        .frontBillede img {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        .bookBoks {
+            width: 110px;
+            background-color: white;
+            align-content: center;
+            margin: 0 auto;
+            letter-spacing: 1.3px;
+        }
+
+        .bookBoks h3 {
+            margin-top: 50px;
+            margin-bottom: 120px;
+            padding: 12px;
+            text-align: center;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            font-size: 12px;
+            color: #74523a;
+        }
+
+        h4 {
+            margin-top: 100px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            text-align: center;
+            color: white;
+        }
+
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            letter-spacing: 1.2px;
+            margin: 0px 80px 0px 80px;
+
+            color: white;
+        }
+
+
+        .about p {
+            padding: 10px;
+        }
+
+        .frontBilledeNed img {
+            width: 46%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    @media only screen and (max-width: 2000px) {
+
+        .logo picture img {
+            width: 10%;
+        }
+
+        .frontBillede img {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 32%;
+        }
+
+        .bookBoks {
+            width: 110px;
+            background-color: white;
+            align-content: center;
+            margin: 0 auto;
+            letter-spacing: 1.3px;
+        }
+
+        .bookBoks h3 {
+            margin-top: 50px;
+            margin-bottom: 120px;
+            padding: 12px;
+            text-align: center;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            font-size: 16px;
+            color: #74523a;
+        }
+
+        h4 {
+            margin-top: 100px;
+            margin-bottom: 0px;
+            font-size: 24px;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            text-align: center;
+            color: white;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            font-family: "Helvetica-Light";
+            font-weight: lighter;
+            letter-spacing: 1.2px;
+            color: white;
+        }
+
+        .about p {
+            font-family: "Helvetica-Light";
+            letter-spacing: 1px;
+            color: black;
+            padding: 0px;
+            margin-left: 40px;
+        }
+
+        .frontBilledeNed img {
+            width: 46%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
 </style>
 
 <body>
@@ -160,7 +292,6 @@
         </div>
         <div class=" frontBillede">
             <a href="indeks.html">
-                <h3>MENU</h3>
                 <img src="billeder/frontBillede.png">
             </a>
         </div>
