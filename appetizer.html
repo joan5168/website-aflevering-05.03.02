@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Rise and Curry</title>
+</head>
+
+<body>
+    <header>
+        <!--<h1>Rise Curry</h1>-->
+        <nav>
+            <div class="menu">
+                <button class="filter" data-hold="forretter">Appetizer</button>
+<!--
+<button class="filter" data-hold="hovedretter">Main dish</button>
+<button class="filter" data-hold="desserter">Dessert</button>
+<button class="filter" data-hold="drikkevarer">Drinks</button>
+<button class="filter" data-hold="alle">Menu</button>
+-->
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div id="popup">
+            <div id="luk"><button>X</button></div>
+            <div id="indhold"></div>
+        </div>
+    </section>
+
+    <section>
+        <div id="liste"></div>
+    </section>
+    <script>
+        let kategoriListe = [];
+        let bgFarver = ["#B2C4B4", "#77967A", "#F4E1B0", "#efcc74", "#CCD7DB", "#B3C2CC"];
+let filter = "alle";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            let temp = document.querySelector("template");
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1kHlpBzSF_zRAtcnb4CWEDYGCl7FR89IigB5GNBF2VdI");
+                kategoriListe = await jsonData.json();
+
+                //sortere efter navn
+                kategoriListe.sort((a, b) => {
+                    return a.navn.localeCompare(b.navn);
+                })
+                visKategori();
+            }
+
+            function visKategori() {
+                dest.innerHTML = "";
+                kategoriListe.forEach(kategorier => {
+                    if (filter == "alle" || filter == kategorier.kategori) {
+
+                        let template = `
+                                <div class="kategorier">
+                                    <h2>${kategorier.navn}</h2>
+                                    <img src="billeder/${kategorier.billede}.jpg" alt="${kategorier.navn}">
+                                    <p>Kategori: ${kategorier.kategori}</p>
+                                    <p>Pris: ${kategorier.pris} kr.</p>
+                                </div>
+                            `;
+
+                        dest.insertAdjacentHTML("beforeend", template);
+
+                        dest.lastElementChild.style.backgroundColor = bgFarver[Math.floor(Math.random() * bgFarver.length)];
+
+
+                    }
+                });
+            }
+
+            document.querySelector("#luk button").addEventListener("click", () => {
+                document.querySelector("#popup").style.display = "none";
+            })
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                //                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                console.log("Viser", filter)
+                visKategori();
+            }
+            getJson();
+        }
+    </script>
+
+</body>
+
+
+</html>
