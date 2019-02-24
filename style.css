@@ -1,7 +1,3 @@
-* {
-    margin: 0;
-}
-
 /*    styling for grid - alle kategorier */
 #liste {
     display: grid;
@@ -74,8 +70,9 @@ button {
     background-color: rgb(244, 218, 152);
     width: 40vw;
     height: 52vh;
-    align-content: center;
+    align-content: space-around;
     margin-top: 0px;
+    margin-right: 20px;
 }
 
 #indhold h2 {
@@ -143,6 +140,10 @@ button {
 @media only screen and (min-width: 320px) {
     .menu {
         text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+
     }
 
     .filter {
@@ -153,38 +154,46 @@ button {
     }
 
     #popup {
-        width: 40vw;
-        height: 7vw;
         position: fixed;
+        width: 80vw;
+        height: 20vw;
         background-color: rgba(142, 121, 104, 0.49);
         display: none;
+        margin: 32px;
+        margin-top: 0px;
     }
 
-    #popup img {
-        max-width: 150px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto
+
+    #indhold {
+        position: fixed;
+        background-color: rgb(244, 218, 152);
+        width: 80vw;
+        height: 60vh;
+        margin: auto;
     }
 
-    #popup p {
-        font-size: 13px;
-        margin: 19px;
+
+    #indhold h2 {
+        font-size: 12px;
         text-align: center;
-        color: #433333;
+        font-family: "Helvetica-Light";
+        color: #8e7968;
+        background-color: rgba(255, 255, 255, 0.44);
+        padding: 2px;
     }
-
-
-
 }
 
 /*responsiv ipad*/
 
-@media only screen and (min-width: 555px) {
+@media only screen and (min-width: 447px) {
     .menu {
         text-align: center;
         background-color: #fff;
         padding: 88px;
+        padding-top: 3px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+
     }
 
     .filter {
@@ -195,23 +204,22 @@ button {
     }
 
     #indhold {
-        box-sizing: border-box;
+        position: fixed;
         background-color: rgb(244, 218, 152);
-        width: 40vw;
-        height: 60vw;
-        align-content: center;
-        margin: auto;
+        width: 43vw;
+        height: 80vh;
+
     }
 
     #popup {
-        width: 40vw;
-        height: vw;
+        position: fixed;
+        width: 43vw;
+        height: 9vw;
         background-color: rgba(142, 121, 104, 0.49);
         display: none;
-        margin-left: 425px;
+        margin-left: 200px;
+
     }
-
-
 
 
 }
@@ -221,6 +229,10 @@ button {
         text-align: center;
         background-color: #fff;
         padding: 90px;
+        padding-top: 3px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+
     }
 
     .filter {
@@ -230,6 +242,29 @@ button {
         color: #837063;
     }
 
+    #indhold {
+        position: fixed;
+        background-color: rgb(244, 218, 152);
+        width: 43vw;
+        height: 90vh;
+        margin: 0px 150px 0px 0px;
+    }
+
+    #popup {
+        position: fixed;
+        width: 43vw;
+        height: 10vw;
+        background-color: rgba(142, 121, 104, 0.49);
+        display: none;
+        margin-left: 220px;
+        margin-top: 45px;
+    }
+
+    #luk button {
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0);
+        margin-right: -65px;
+    }
 
 
 }
@@ -238,6 +273,9 @@ button {
     .menu {
         text-align: center;
         background-color: #fff;
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
     }
 
     .filter {
@@ -276,6 +314,15 @@ button {
         align-self: center;
     }
 
+    #indhold {
+        position: fixed;
+        background-color: rgb(244, 218, 152);
+        width: 43vw;
+        height: 60vh;
+        margin: 0px 150px 0px 0px;
+    }
+
+
 }
 
 
@@ -297,7 +344,6 @@ button {
         color: #837063;
         margin-top: 50px;
         margin-bottom: 50px;
-
     }
 
     button {
@@ -306,4 +352,38 @@ button {
         padding-right: 70px;
         align-self: center;
     }
-}
+
+
+    #popup {
+        position: fixed;
+        width: 43vw;
+        height: 10vw;
+        background-color: rgba(142, 121, 104, 0.49);
+        display: none;
+        margin-left: 405px;
+
+    }
+
+    #popup img {
+        max-width: 170px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #indhold {
+        position: fixed;
+        background-color: rgb(244, 218, 152);
+        width: 43vw;
+        height: 60vh;
+
+    }
+
+    #indhold h2 {
+        font-size: 23px;
+        text-align: center;
+        font-family: "Helvetica-Light";
+        color: #8e7968;
+        background-color: rgba(255, 255, 255, 0.44);
+        padding: 2px;
+    }
